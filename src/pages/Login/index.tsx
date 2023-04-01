@@ -72,10 +72,10 @@ const Login: FC = () => {
             }}
           />
           <span className={style.LogIn__right__form__forgot}>
-            Forgot PASSWORD?
+            FORGOT PASSWORD?
           </span>
           <button className={style.LogIn__right__form__button} type="submit">
-            Login
+            LOG IN
           </button>
         </form>
       </div>
