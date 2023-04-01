@@ -1,7 +1,35 @@
+import { FC, FormEvent, useState } from "react";
 import style from "./index.module.scss";
 import loginPageImage from "../../assets/login-page-image.png";
-
-const Login = () => {
+import useInput from "../../utils/hooks/useInput";
+import { useNavigate } from "react-router-dom";
+import isPassword from "../../utils/helperfunctions/isPassword";
+import isEmail from "../../utils/helperfunctions/isEmail";
+const Login: FC = () => {
+  const [email, setEmail, clearEmail] = useInput("");
+  const [password, setPassword, clearPassword] = useInput("");
+  const [emailError, setEmailError] = useState(false);
+  const [passWordError, setPassWordError] = useState(false);
+  const navigate = useNavigate();
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!isEmail(String(email)) || !isPassword(String(password))) {
+      if (!isEmail(String(email))) {
+        setEmailError(true);
+        setTimeout(() => {
+          setEmailError(false);
+        }, 3000);
+      }
+      if (!isPassword(String(password))) {
+        setPassWordError(true);
+        setTimeout(() => {
+          setPassWordError(false);
+        }, 3000);
+      }
+      return;
+    }
+    navigate("/dashboard/users");
+  };
   return (
     <section>
       <div>
