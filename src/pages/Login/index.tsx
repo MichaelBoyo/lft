@@ -41,6 +41,12 @@ const Login: FC = () => {
         <form>
           <input placeholder="password" type="email" />
           <input placeholder="password" type="password" />
+          <span className={style.LogIn__right__form__forgot}>
+            FORGOT PASSWORD?
+          </span>
+          <button className={style.LogIn__right__form__button} type="submit">
+            LOG IN
+          </button>
         </form>
       </div>
     </section>
