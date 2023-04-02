@@ -98,7 +98,40 @@
   }
 }
 
-.TableHeader__filter__container__input__display{
+.TableHeader__filter__container__input__display {
   display: flex !important;
   gap: 10px !important;
+}
+.buttonDiv {
+  display: flex !important;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+.resetButton {
+  box-sizing: border-box;
+  margin-bottom: 2%;
+
+  width: 98px;
+  height: 40px;
+  left: 378px;
+  top: 1020px;
+
+  border: 1px solid #545f7d;
+  border-radius: 8px;
+}
+.filterButton {
+  margin-bottom: 2%;
+  box-sizing: border-box;
+
+  width: 98px;
+  height: 40px;
+  left: 490px;
+  top: 1020px;
+  color: #ffffff;
+
+  background: #39cdcc;
+  border: 1px solid #39cdcc;
+  border-radius: 8px;
 }
