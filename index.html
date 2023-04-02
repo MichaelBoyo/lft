@@ -9,23 +9,5 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script type="text/javascript">
-      (function (value) {
-        if (value.search[1] === "/") {
-          var decoded = value.search
-            .slice(1)
-            .split("&")
-            .map(function (s) {
-              return s.replace(/~and~/g, "&");
-            })
-            .join("?");
-          window.history.replaceState(
-            null,
-            null,
-            value.pathname.slice(0, -1) + decoded + value.hash
-          );
-        }
-      })(window.location);
-    </script>
   </body>
 </html>
