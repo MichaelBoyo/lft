@@ -1,0 +1,104 @@
+.TableHeader {
+  position: relative;
+  &__heading {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+    @media screen and (max-width: 928px) {
+      font-size: 10px;
+      gap: 10px;
+    }
+    text-transform: uppercase;
+    width: 100%;
+    &__container {
+      display: flex;
+      align-items: center;
+      flex-basis: 15%;
+      gap: 11px;
+      white-space: nowrap;
+      &__icon {
+        cursor: pointer;
+      }
+      @media screen and (max-width: 928px) {
+        flex-basis: 30%;
+        display: none;
+        &__display {
+          display: flex;
+        }
+        &__display:last-child {
+          width: calc(11 / 12 * 100%);
+        }
+      }
+    }
+  }
+  &__filter {
+    position: absolute;
+    background-color: #fff;
+    width: 300px;
+    top: 100%;
+    z-index: 20;
+    overflow-y: hidden;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    transition: all 500ms ease-in;
+    &__active {
+      overflow-y: visible;
+      height: calc(100% + 20px);
+      border: 1px solid rgba(84, 95, 125, 0.14);
+      box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+      border-radius: 4px;
+    }
+    &___container {
+      padding: 10px 20px;
+      transition: background-color 500ms ease-in;
+      &:hover {
+        background-color: #f5f6f8;
+      }
+    }
+    &__input {
+      &__display {
+        @media screen and (max-width: 928px) {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+.TableHeader__filter__container__input__text {
+  width: 100% !important;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 928px) {
+    display: none !important;
+  }
+  &__display {
+    display: none;
+    @media screen and (max-width: 928px) {
+      display: flex !important;
+    }
+  }
+  gap: 10px;
+  input {
+    display: block;
+    margin: auto;
+    padding: 15px;
+    border: 1px solid rgba(84, 95, 125, 0.14);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    transition: all 500ms ease-in;
+    &:focus {
+      border: 1px solid rgba(84, 95, 125, 0.3);
+      box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.06);
+      outline: none;
+    }
+  }
+}
+
+.TableHeader__filter__container__input__display{
+  display: flex !important;
+  gap: 10px !important;
+}

@@ -1,22 +1,20 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 export interface AppState {
-  loggedIn: boolean
+  loggedIn: boolean;
 }
 const initialState: AppState = {
   loggedIn: false,
 };
 
 const AppSlice = createSlice({
-  name: 'app',
+  name: "app",
   initialState,
   reducers: {
     logIn(state: AppState) {
-      // A demo since we won't actually be managing such states
       state.loggedIn = true;
     },
     logOut(state: AppState) {
-      // A demo since we won't actually be managing such states
       state.loggedIn = false;
     },
   },
