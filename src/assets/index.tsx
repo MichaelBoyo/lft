@@ -12,6 +12,7 @@ import DateIcon from "./icons/DateIcon";
 import LeftArrow from "./icons/LeftArrow";
 import Star from "./icons/Star";
 import UnStar from "./icons/UnStar";
+import Users from "./icons/Users";
 export {
   avatar,
   Activate,
@@ -26,4 +27,5 @@ export {
   LeftArrow,
   Star,
   UnStar,
+  Users,
 };
