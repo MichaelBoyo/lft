@@ -11,7 +11,7 @@ const NotFound404: FC<INotFound> = () => {
       <p className={style.NotFound__details} data-testid="page-not-found">
         Nothing Here!!
       </p>
-      <Link to="/dashboard" className={style.NotFound__button}>
+      <Link to="/dashboard/users" className={style.NotFound__button}>
         Back To Dashboard
       </Link>
     </div>
