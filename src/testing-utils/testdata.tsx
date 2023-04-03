@@ -22,7 +22,7 @@ const data: Response = {
   education: {
     level: "Bsc",
     employmentStatus: "Employed",
-    sector: "FinTech",
+    sector: "Finance",
     duration: "2 Years",
     officeEmail: "mikee@yahoo.com",
     monthlyIncome: ["500.29", "6000.11"],
