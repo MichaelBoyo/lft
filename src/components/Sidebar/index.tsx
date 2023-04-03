@@ -197,19 +197,21 @@ const Sidebar: FC<SideBarInterface> = ({ className }) => (
     className={`${style.Sidebar} ${className}`}
     data-testid="sidebar-container"
   >
-    <div className={style.Sidebar__switch}>
-      <BriefCase className={style.Sidebar__switch_icon} />{" "}
-      <span data-testid="switch-org">Switch Organization</span>{" "}
-      <OrgDropDown className={style.Sidebar__switch__drop} />{" "}
+    <div  className={style.sideInnerbar}>
+      <div className={style.Sidebar__switch}>
+        <BriefCase className={style.Sidebar__switch_icon} />{" "}
+        <span data-testid="switch-org">Switch Organization</span>{" "}
+        <OrgDropDown className={style.Sidebar__switch__drop} />{" "}
+      </div>
+      <SideBarLink to="/dashboard" end>
+        <Home className={style.Sidebar__link__icon} />
+        <span data-testid="dashboard">Dashboard</span>
+      </SideBarLink>
+      {sidebarElements.map((props: SidebarElements) => (
+        <SidebarSection {...props} key={`sidebarElements-${props.heading}`} />
+      ))}
+      <p className={style.version}>v1.2.0</p>
     </div>
-    <SideBarLink to="/dashboard" end>
-      <Home className={style.Sidebar__link__icon} />
-      <span data-testid="dashboard">Dashboard</span>
-    </SideBarLink>
-    {sidebarElements.map((props: SidebarElements) => (
-      <SidebarSection {...props} key={`sidebarElements-${props.heading}`} />
-    ))}
-    <p className={style.version}>v1.2.0</p>
   </div>
 );
 
