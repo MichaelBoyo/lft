@@ -14,12 +14,12 @@ const SidebarSection: FC<ISidebarSection & SidebarElements> = ({
     className={style.SidebarSection}
     data-testid={`sidebar-elements-${heading}`}
   >
-    <p
+    <div
       className={style.SidebarSection__heading}
       data-testid={`sidebar-elements-heading-${heading}`}
     >
-      {heading}
-    </p>
+      {heading !== "" ? heading : <hr className={style.solidhr} />}
+    </div>
     {children.map(({ Icon, name, to }) => (
       <SideBarLink to={`/dashboard${to}`} key={`sidebarSelection-${to}`}>
         <Icon className={style.SidebarSection__icon} />

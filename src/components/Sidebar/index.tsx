@@ -46,6 +46,7 @@ export interface SidebarElements {
 }
 
 const Sidebar: FC<SideBarInterface> = ({ className }) => {
+  
   const sidebarElements: Required<SidebarElements[]> = [
     {
       heading: "CUSTOMERS",
@@ -159,6 +160,7 @@ const Sidebar: FC<SideBarInterface> = ({ className }) => {
         },
       ],
     },
+
     {
       heading: "SETTINGS",
       children: [
@@ -186,6 +188,11 @@ const Sidebar: FC<SideBarInterface> = ({ className }) => {
           to: "/system-messages",
           key: "system-messages",
         },
+      ],
+    },
+    {
+      heading: "",
+      children: [
         {
           Icon: LogOut,
           name: "Logout",
@@ -213,6 +220,7 @@ const Sidebar: FC<SideBarInterface> = ({ className }) => {
         {sidebarElements.map((props: SidebarElements) => (
           <SidebarSection {...props} key={`sidebarElements-${props.heading}`} />
         ))}
+       
         <p className={style.version}>v1.2.0</p>
       </div>
     </div>

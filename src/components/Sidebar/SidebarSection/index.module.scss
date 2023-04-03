@@ -1,17 +1,22 @@
 @import "src/sass/values";
-.SidebarSection{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 16px;
-    @media screen and (max-width: 928px) {
-        margin-top: 16px;
-    }
-    &__heading{
-        padding: 0 16px;
-        font-size: 14px;
-        font-weight: 500;
-        color: $sidebar-heading-text;
-
-    }
+.SidebarSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 18px;
+  margin-top: 20px;
+  @media screen and (max-width: 928px) {
+    margin-top: 18px;
+  }
+  &__heading {
+    padding: 0 16px;
+    font-size: 12px;
+    font-weight: 500;
+    color: $sidebar-heading-text;
+  }
+}
+.solidhr {
+  opacity: 0.1;
+  border: 1px solid #213f7d;
+  margin-top: 50px;
 }
