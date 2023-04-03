@@ -1,6 +1,7 @@
 import Login from "./pages/Login";
 import UserDashboard from "./pages/UserDashboard";
 import UserDetails from "./pages/UserDetails";
+import ComingSoon from "./pages/ComingSoon";
 export const routes = [
   {
     path: "/login",
@@ -25,6 +26,10 @@ export const routes = [
             element: <UserDetails />,
           },
         ],
+      },
+      {
+        path: ":route",
+        element: <ComingSoon />,
       },
     ],
   },
