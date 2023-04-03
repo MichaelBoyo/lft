@@ -1,6 +1,5 @@
 import { FC } from "react";
-
-import Loading from "../../assets/icons/Loading";
+import { Loading } from "../../assets";
 import style from "./index.module.scss";
 
 interface ILoader {}

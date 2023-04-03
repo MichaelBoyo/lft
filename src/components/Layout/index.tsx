@@ -1,7 +1,6 @@
 import { FC, ReactNode, useState } from "react";
 import style from "./index.module.scss";
-import Navbar from "../Navbar";
-import Sidebar from "../Sidebar";
+import { Navbar, Sidebar } from "../../components";
 interface LayoutInterface {
   children: ReactNode;
   className: string;

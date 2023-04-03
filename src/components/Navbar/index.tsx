@@ -1,13 +1,10 @@
 import { Dispatch, FC, SetStateAction } from "react";
 
 import { Link } from "react-router-dom";
-import DropDown from "../../assets/icons/DropDown";
-import Logo from "../../assets/icons/Logo";
-import Notification from "../../assets/icons/Notification";
-import Search from "../../assets/icons/Search";
-import userImage from "../../assets/user.png";
+import { DropDown, Logo, Notification, Search, userImage } from "../../assets";
+import { Input } from "../../components";
+
 import useInput from "../../utils/hooks/useInput";
-import Input from "../Input";
 
 import style from "./index.module.scss";
 
@@ -16,7 +13,11 @@ interface NavBarInterface {
   showSideBar: boolean;
   setShowSideBar: Dispatch<SetStateAction<boolean>>;
 }
-const Navbar: FC<NavBarInterface> = ({ className, showSideBar, setShowSideBar }) => {
+const Navbar: FC<NavBarInterface> = ({
+  className,
+  showSideBar,
+  setShowSideBar,
+}) => {
   const [search, changeSearch, clearSearch] = useInput<string>("");
   return (
     <div

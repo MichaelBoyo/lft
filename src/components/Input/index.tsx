@@ -1,10 +1,10 @@
-import React, { ChangeEvent, FC } from 'react';
+import { ChangeEvent, FC } from "react";
 
-import style from './index.module.scss';
+import style from "./index.module.scss";
 
 interface IInput {
   placeholder: string;
-  value: string | number ;
+  value: string | number;
   setValue: (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
   type: string;
   clearValue: () => void;
@@ -19,7 +19,7 @@ const Input: FC<IInput> = ({
   setValue,
   type,
   error = false,
-  errorMessage = '',
+  errorMessage = "",
   className,
   label,
 }) => (
@@ -32,13 +32,17 @@ const Input: FC<IInput> = ({
       data-testid="input"
     />
 
-    {!!error && <p className={style.Input__error} data-testid="error-message">{errorMessage}</p>}
+    {!!error && (
+      <p className={style.Input__error} data-testid="error-message">
+        {errorMessage}
+      </p>
+    )}
   </div>
 );
 Input.defaultProps = {
   error: false,
-  errorMessage: '',
-  className: '',
-  label: '',
+  errorMessage: "",
+  className: "",
+  label: "",
 };
 export default Input;
