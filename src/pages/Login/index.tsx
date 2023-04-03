@@ -1,13 +1,12 @@
 import { FC, FormEvent, useState } from "react";
-import style from "./index.module.scss";
-import loginPageImage from "../../assets/login-page-image.png";
-import Logo from "../../assets/icons/Logo";
-import useInput from "../../utils/hooks/useInput";
 import { useNavigate } from "react-router-dom";
+import style from "./index.module.scss";
+import { Logo, loginPageImage } from "../../assets";
+import useInput from "../../utils/hooks/useInput";
 import isPassword from "../../utils/helperfunctions/isPassword";
 import isEmail from "../../utils/helperfunctions/isEmail";
-import Input from "../../components/Input";
-import PassWordInput from "../../components/PassWordInput";
+import { Input, PassWordInput } from "../../components";
+
 const Login: FC = () => {
   const [email, setEmail, clearEmail] = useInput("");
   const [password, setPassword, clearPassword] = useInput("");

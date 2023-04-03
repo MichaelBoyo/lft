@@ -1,6 +1,6 @@
 import avatar from "./avatar.png";
 
-
+import loginPageImage from "./login-page-image.png";
 import Activate from "./icons/Activate";
 import AuditLogs from "./icons/AuditLogs";
 import Blacklist from "./icons/Blacklist";
@@ -96,4 +96,5 @@ export {
   Karma,
   LoanRequests,
   Reports,
+  loginPageImage,
 };
