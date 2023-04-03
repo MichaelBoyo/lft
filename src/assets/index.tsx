@@ -15,6 +15,7 @@ import UnStar from "./icons/UnStar";
 import Users from "./icons/Users";
 import LeftNavigation from "./icons/LeftNavigation";
 import RightNavigation from "./icons/RightNavigation";
+import NotFound from "./icons/NotFound";
 export {
   avatar,
   Activate,
@@ -31,5 +32,6 @@ export {
   UnStar,
   Users,
   LeftNavigation,
-  RightNavigation
+  RightNavigation,
+  NotFound,
 };
