@@ -1,7 +1,7 @@
 import { Dispatch, FC, SetStateAction, useEffect, useState } from "react";
 
 import moment from "moment";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Activate from "../../../assets/icons/Activate";
 import Blacklist from "../../../assets/icons/Blacklist";
 import SideMenu from "../../../assets/icons/SideMenu";
@@ -38,6 +38,7 @@ const TableRow: FC<ITableRow> = ({
 }) => {
   const [dropDown, setDropdown] = useState<boolean>(false);
   const [blacklist, setBlacklist] = useState<boolean>(false);
+  const navigate = useNavigate();
   useEffect(() => {
     if (blackListed.includes(userName)) {
       setBlacklist(true);
@@ -46,8 +47,12 @@ const TableRow: FC<ITableRow> = ({
     }
   }, [blackListed, userName]);
   return (
-    <div className={style.TableRow} data-testid="table-row-container">
-      <div className={style.TableRow__elements} data-testid="org-name">
+    <div
+      className={style.TableRow}
+      data-testid="table-row-container"
+      
+    >
+      <div className={style.TableRow__elements} data-testid="org-name" onClick={() => navigate(`/dashboard/users/${id}`)}>
         {orgName}
       </div>
       <div
@@ -57,21 +62,23 @@ const TableRow: FC<ITableRow> = ({
           {userName}
         </Link>
       </div>
-      <div className={style.TableRow__elements} data-testid="email">
+      <div className={style.TableRow__elements} data-testid="email" onClick={() => navigate(`/dashboard/users/${id}`)}>
         {email}
       </div>
-      <div className={style.TableRow__elements} data-testid="phone-number">
+      <div className={style.TableRow__elements} data-testid="phone-number" onClick={() => navigate(`/dashboard/users/${id}`)}>
         {phoneNumber}
       </div>
       <div
         className={`${style.TableRow__elements} ${style.TableRow__elements__display}`}
         data-testid="created-at"
+        onClick={() => navigate(`/dashboard/users/${id}`)}
       >
         {moment(createdAt).format("MMMM D YYYY, h:mm:ss A")}
       </div>
       <div
         className={`${style.TableRow__container} ${style.TableRow__elements} ${style.TableRow__elements__display} `}
         data-testid="status"
+        onClick={() => navigate(`/dashboard/users/${id}`)}
       >
         <span
           className={`${style.TableRow__container__status} ${

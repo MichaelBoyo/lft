@@ -9,6 +9,7 @@
   background: $dashboard-background;
   padding: 30px;
   gap: 30px;
+
   &__heading {
     font-size: 24px;
     font-weight: 500;
@@ -19,7 +20,7 @@
     width: 100%;
     overflow-x: scroll;
     gap: 30px;
-    &:active{
+    &:active {
       cursor: grab;
     }
     -ms-overflow-style: none;
