@@ -13,12 +13,16 @@
   gap: 30px;
   position: fixed;
   overflow-y: scroll;
-
+  margin-top: 100px;
+  // background-color: red;
+  @media screen and (max-width: 928px) {
+    margin-top: 0;
+  }
   &__switch {
     display: flex;
     align-items: center;
     gap: 18px;
-    padding: 15px 20px;
+    padding: 15px 12px;
     font-size: 14px;
     white-space: nowrap;
     color: $sidebar-link-text;
@@ -27,11 +31,17 @@
   &__container {
     width: 100%;
   }
+  &::-webkit-scrollbar {
+    width: 2px;
+    background-color: lightgrey;
+  }
+  &::-webkit-scrollbar-thumb {
+    width: 2px;
+    background-color: grey;
+    border-radius: 5px;
+  }
 }
 
-.Sidebar::-webkit-scrollbar {
-  display: none;
-}
 .version {
   font-style: normal;
   font-weight: 400;
