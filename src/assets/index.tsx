@@ -13,6 +13,8 @@ import LeftArrow from "./icons/LeftArrow";
 import Star from "./icons/Star";
 import UnStar from "./icons/UnStar";
 import Users from "./icons/Users";
+import LeftNavigation from "./icons/LeftNavigation";
+import RightNavigation from "./icons/RightNavigation";
 export {
   avatar,
   Activate,
@@ -28,4 +30,6 @@ export {
   Star,
   UnStar,
   Users,
+  LeftNavigation,
+  RightNavigation
 };

@@ -1,13 +1,8 @@
 import { FC, useEffect, useState } from "react";
-
-import LeftNavigation from "../../assets/icons/LeftNavigation";
-import RightNavigation from "../../assets/icons/RightNavigation";
-import { useGetUsersQuery } from "../../utils/redux/apiConnection";
-import Loader from "../Loader";
-import SelectViews from "../SelectViews";
-import TableHeader from "./TableHeader";
-import TableRow from "./TableRow";
 import style from "./index.module.scss";
+import { useGetUsersQuery } from "../../utils/redux/apiConnection";
+import { LeftNavigation, RightNavigation } from "../../assets";
+import { SelectViews, TableHeader, TableRow, Loader } from "../../components";
 
 interface ITable {}
 export interface FilteredQuery {

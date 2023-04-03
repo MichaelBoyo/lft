@@ -9,6 +9,7 @@
   position: relative;
   align-items: center;
   color: $log-in-text;
+  cursor: pointer;
   &:first-child {
     padding-top: 0;
   }
@@ -32,14 +33,12 @@
       width: 30%;
       max-width: 30%;
       display: none;
-      &__display{
-      display: flex;
-
-    }
+      &__display {
+        display: flex;
+      }
     }
   }
   &__container {
-
     &__status {
       background-color: $pending;
       color: $pending-text;
@@ -48,7 +47,7 @@
       border-radius: 99px;
       display: block;
       width: fit-content;
-      
+
       &__active {
         background-color: $active;
         color: $active-text;

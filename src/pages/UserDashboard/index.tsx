@@ -1,12 +1,13 @@
 import { FC } from "react";
-import DashboardUsers from "../../assets/icons/DashboardUsers";
-import DashboardActiveUsers from "../../assets/icons/DashboardActiveUsers";
-import DashboardUsersWithLoans from "../../assets/icons/DashboardUsersWithLoans";
-import DashboardUsersWithSavings from "../../assets/icons/DashboardUsersWithSavings";
-import Layout from "../../components/Layout";
-import UsersStats from "../../components/UsersStats";
 import style from "./index.module.scss";
-import Table from "../../components/Table";
+import {
+  DashboardUsers,
+  DashboardActiveUsers,
+  DashboardUsersWithLoans,
+  DashboardUsersWithSavings,
+} from "../../assets";
+
+import { Table, UsersStats, Layout } from "../../components";
 interface UserDashboardInterface {}
 interface Stats {
   Icon: FC<{ className: string }>;
