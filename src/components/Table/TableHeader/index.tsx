@@ -6,15 +6,10 @@ import {
   useRef,
   useState,
 } from "react";
-
-import Input from "../../Input";
-import SelectInput from "../../SelectInput";
-import SelectDate from "../../SelectDate";
+import { SelectInput, SelectDate, Input } from "../../../components";
 import useInput from "../../../utils/hooks/useInput";
-import Filter from "../../../assets/icons/Filter";
-
+import { Filter } from "../../../assets";
 import { FilteredQuery } from "../index";
-
 import style from "./index.module.scss";
 
 interface ITableHeader {
