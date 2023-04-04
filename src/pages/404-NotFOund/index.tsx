@@ -1,10 +1,9 @@
-/* eslint-disable */
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import { NotFound } from "../../assets";
 import style from "./index.module.scss";
-interface INotFound {}
-const NotFound404: FC<INotFound> = () => {
+interface NotFoundInterface {}
+const NotFound404: FC<NotFoundInterface> = () => {
   return (
     <div className={style.NotFound}>
       <NotFound className={style.NotFound__illustration} />

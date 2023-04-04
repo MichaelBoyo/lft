@@ -1,7 +1,5 @@
 import { FC } from "react";
-
 import { Layout } from "../../components";
-
 import style from "./index.module.scss";
 
 interface ComingSoonInterface {}

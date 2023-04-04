@@ -1,18 +1,18 @@
 import { Dispatch, FC, SetStateAction, useState } from "react";
 
 import { avatar, Star, UnStar } from "../../assets";
-import { Navigation } from "../../pages/UserDetails";
+import { Navigation } from "../../pages/UserDetails/navItems";
 import { Response } from "../../utils/redux/api";
 
 import style from "./index.module.scss";
 
-interface IUserDetailSummary {
+interface UserDetailSummaryInterface {
   data?: Response;
   navigation: Navigation[];
   setNavigation: Dispatch<SetStateAction<Navigation[]>>;
 }
 
-const UserDetailSummary: FC<IUserDetailSummary> = ({
+const UserDetailSummary: FC<UserDetailSummaryInterface> = ({
   data,
   navigation,
   setNavigation,

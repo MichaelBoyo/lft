@@ -1,14 +1,12 @@
 import { FC, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-import { useGetUserQuery } from "../../utils/redux/api";
+import { useGetUserQuery } from "../../utils";
+import {navItems, Navigation} from "./navItems";
 import style from "./index.module.scss";
 import { LeftArrow } from "../../assets";
 import { Loader, Layout, UserDetailSummary, UserInfo } from "../../components";
-export interface Navigation {
-  text: string;
-  active: boolean;
-}
+
 interface UserDetailsInterface {}
 const UserDetails: FC<UserDetailsInterface> = () => {
   const { id } = useParams();
@@ -19,32 +17,7 @@ const UserDetails: FC<UserDetailsInterface> = () => {
   const [loading, setLoading] = useState<boolean>(
     !!localStorage.getItem(`user-${id}`)
   );
-  const [navigation, setNavigation] = useState<Navigation[]>([
-    {
-      text: "General Details",
-      active: true,
-    },
-    {
-      text: "Documents",
-      active: false,
-    },
-    {
-      text: "Bank Details",
-      active: false,
-    },
-    {
-      text: "Loans",
-      active: false,
-    },
-    {
-      text: "Savings",
-      active: false,
-    },
-    {
-      text: "App and System",
-      active: false,
-    },
-  ]);
+  const [navigation, setNavigation] = useState<Navigation[]>(navItems);
   useEffect(() => {
     if (isSuccess) {
       localStorage.removeItem(`user-${id}`);
