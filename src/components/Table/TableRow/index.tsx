@@ -83,7 +83,6 @@ const TableRow: FC<ITableRow> = ({
       <div
         className={`${style.TableRow__container} ${style.TableRow__elements} ${style.TableRow__elements__display} `}
         data-testid="status"
-        onClick={() => navigate(`/dashboard/users/${id}`)}
       >
         <span
           className={`${style.TableRow__container__status} ${
