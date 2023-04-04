@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import style from "./index.module.scss";
-import { useGetUsersQuery } from "../../utils/redux/apiConnection";
+import { useGetUsersQuery } from "../../utils/redux/api";
 import { LeftNavigation, RightNavigation } from "../../assets";
 import { SelectViews, TableHeader, TableRow, Loader } from "../../components";
 

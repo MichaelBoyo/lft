@@ -1,4 +1,4 @@
-import { Response } from "../utils/redux/apiConnection";
+import { Response } from "../utils/redux/api";
 
 const data: Response = {
   createdAt: "2021-06-12T01:21:47.433Z",

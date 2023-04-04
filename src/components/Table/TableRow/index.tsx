@@ -3,8 +3,8 @@ import { Dispatch, FC, SetStateAction, useEffect, useState } from "react";
 import moment from "moment";
 import { Link, useNavigate } from "react-router-dom";
 import { Activate, Blacklist, SideMenu, View } from "../../../assets";
-import { ifCondition } from "../../../utils/helperfunctions";
-import { STATUS } from "../../../utils/redux/apiConnection";
+import { ifElse } from "../../../utils/helperfunctions";
+import { STATUS } from "../../../utils/enums";
 import style from "./index.module.scss";
 
 interface ITableRow {
@@ -90,10 +90,10 @@ const TableRow: FC<ITableRow> = ({
           } ${
             blacklist
               ? style.TableRow__container__status__blacklisted
-              : ifCondition(
+              : ifElse(
                   status === STATUS.active,
                   style.TableRow__container__status__active,
-                  ifCondition(
+                  ifElse(
                     status === STATUS.inactive,
                     style.TableRow__container__status__inactive,
                     ""

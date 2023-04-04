@@ -1,3 +1,10 @@
-export { default as isEmail } from './isEmail';
-export { default as isPassword } from './isPassword';
-export { default as ifCondition } from './ifCondition';
+
+import ifElse from "./ifElse";
+import isEmail from "./isEmail";
+import isPassword from "./isPassword";
+
+export {
+    ifElse,
+    isEmail,
+    isPassword
+}

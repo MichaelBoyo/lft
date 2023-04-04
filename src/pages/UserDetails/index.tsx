@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-import { useGetUserQuery } from "../../utils/redux/apiConnection";
+import { useGetUserQuery } from "../../utils/redux/api";
 import style from "./index.module.scss";
 import { LeftArrow } from "../../assets";
 import { Loader, Layout, UserDetailSummary, UserInfo } from "../../components";

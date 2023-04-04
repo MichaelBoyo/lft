@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { Response } from "../../utils/redux/apiConnection";
+import { Response } from "../../utils/redux/api";
 
 import style from "./index.module.scss";
 

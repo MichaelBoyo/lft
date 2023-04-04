@@ -1,22 +1,14 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-import { ifCondition } from "../helperfunctions";
+import { ifElse } from "../helperfunctions";
+import { STATUS, TIER } from "../enums";
+
 const ApiHeaders = {
   Accept: "application/json",
 };
 const baseUrl = "https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1";
 const ONE_YEAR = 365 * 24 * 60 * 60 * 1000;
 
-export enum STATUS {
-  active = "active",
-  inactive = "inactive",
-  pending = "pending",
-}
-export enum TIER {
-  active = 3,
-  inactive = 1,
-  pending = 2,
-}
 type Education = {
   level: string;
   employmentStatus: string;
@@ -48,7 +40,7 @@ const createRequest = (url: string, method: any) => ({
   method,
 });
 
-const apiConnection = createApi({
+const api = createApi({
   reducerPath: "Api",
   baseQuery: fetchBaseQuery({ baseUrl }),
   tagTypes: ["Get"],
@@ -70,7 +62,7 @@ const apiConnection = createApi({
           status:
             user.createdAt > user.lastActiveDate
               ? STATUS.inactive
-              : ifCondition(
+              : ifElse(
                   Date.parse(user.lastActiveDate) - Date.parse(user.createdAt) >
                     ONE_YEAR &&
                     Date.parse(user.lastActiveDate) -
@@ -99,7 +91,7 @@ const apiConnection = createApi({
         tier:
           response.createdAt > response.lastActiveDate
             ? TIER.inactive
-            : ifCondition(
+            : ifElse(
                 Date.parse(response.lastActiveDate) -
                   Date.parse(response.createdAt) >
                   ONE_YEAR &&
@@ -114,5 +106,5 @@ const apiConnection = createApi({
     }),
   }),
 });
-export const { useGetUsersQuery, useGetUserQuery } = apiConnection;
-export default apiConnection;
+export const { useGetUsersQuery, useGetUserQuery } = api;
+export default api;

@@ -2,7 +2,7 @@ import { Dispatch, FC, SetStateAction, useState } from "react";
 
 import { avatar, Star, UnStar } from "../../assets";
 import { Navigation } from "../../pages/UserDetails";
-import { Response } from "../../utils/redux/apiConnection";
+import { Response } from "../../utils/redux/api";
 
 import style from "./index.module.scss";
 
