@@ -10,13 +10,13 @@ import {
 import OrgDropDown from "../../assets/icons/OrgDropDown";
 import style from "./index.module.scss";
 
-interface ISelectViews {
+interface SelectViewsInterface {
   select: number;
   setSelect: Dispatch<SetStateAction<number>>;
   setCurrentIndex: Dispatch<SetStateAction<number>>;
 }
-const values = [1, 5, 10, 15, 20, 25];
-const SelectViews: FC<ISelectViews> = ({
+const values = [10, 20, 30, 50, 100];
+const SelectViews: FC<SelectViewsInterface> = ({
   select,
   setSelect,
   setCurrentIndex,
