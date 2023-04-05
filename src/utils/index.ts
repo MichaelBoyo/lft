@@ -8,5 +8,4 @@ export {
     isPassword,
     isEmail,
     useGetUserQuery,
-
 }
